@@ -1,0 +1,4 @@
+interface:
+  display_name: "Chinese Git Commit"
+  short_description: "Draft Chinese Gitmoji + Conventional Commits messages"
+  default_prompt: "Use $git-commit-zh to inspect the current git changes and draft a Chinese commit message using Gitmoji and Conventional Commits."

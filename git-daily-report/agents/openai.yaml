@@ -1,0 +1,4 @@
+interface:
+  display_name: "Git Daily Report"
+  short_description: "Generate Chinese daily reports from git changes"
+  default_prompt: "Use $git-daily-report to inspect today's commits, diffs, and uncommitted changes, then draft a numbered Chinese daily report."
