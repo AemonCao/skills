@@ -9,6 +9,7 @@ This repository contains local Codex skills used to extend task-specific workflo
 - `git-commit-zh`: drafts and creates Chinese Git commit messages using Gitmoji and Conventional Commits.
 - `git-daily-report`: generates concise Chinese daily reports from Git history and current changes.
 - `grill-me`: stress-tests plans or designs through focused, sequential questioning.
+- `markdown-normalizer`: converts plain or loosely formatted text into clean Markdown without changing the substance.
 
 ## Structure
 
@@ -21,6 +22,8 @@ skills/
   git-daily-report/
     SKILL.md
   grill-me/
+    SKILL.md
+  markdown-normalizer/
     SKILL.md
 ```
 
