@@ -1,5 +1,7 @@
 # Skills
 
+[中文说明](README.zh-CN.md)
+
 This repository contains local Codex skills used to extend task-specific workflows.
 
 ## Available Skills
