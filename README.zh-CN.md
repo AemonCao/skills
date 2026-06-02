@@ -9,6 +9,7 @@
 - `git-commit-zh`：检查 Git 改动后，生成并执行符合 `Gitmoji + Conventional Commits` 规范的中文提交。
 - `git-daily-report`：根据当天提交记录、暂存区和未提交改动，整理出简洁的中文工作日报。
 - `grill-me`：围绕计划或设计进行连续追问，帮助梳理依赖、分支决策和潜在风险。
+- `grill-with-docs`：针对项目的领域模型和既有决策拷问计划，在术语和取舍逐步明确的过程中，同步更新 `CONTEXT.md` 和 ADR 文档。
 - `markdown-normalizer`：将普通文本或格式松散的内容整理为清晰的 Markdown，并保持原意不变。
 
 ## 目录结构
@@ -23,6 +24,10 @@ skills/
     SKILL.md
   grill-me/
     SKILL.md
+  grill-with-docs/
+    SKILL.md
+    CONTEXT-FORMAT.md
+    ADR-FORMAT.md
   markdown-normalizer/
     SKILL.md
 ```
