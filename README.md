@@ -11,6 +11,8 @@ This repository contains local Codex skills used to extend task-specific workflo
 - `grill-me`: stress-tests plans or designs through focused, sequential questioning.
 - `grill-with-docs`: stress-tests a plan against the project's domain model and documented decisions, updating `CONTEXT.md` and ADRs inline as terms and trade-offs are resolved.
 - `markdown-normalizer`: converts plain or loosely formatted text into clean Markdown without changing the substance.
+- `handoff`: compacts the current conversation into a handoff document so another agent can pick up the work.
+- `prototype`: builds a throwaway prototype to flesh out a design — a terminal app for logic/state questions, or several toggleable UI variations for design questions.
 
 ## Structure
 
@@ -30,6 +32,12 @@ skills/
     ADR-FORMAT.md
   markdown-normalizer/
     SKILL.md
+  handoff/
+    SKILL.md
+  prototype/
+    SKILL.md
+    LOGIC.md
+    UI.md
 ```
 
 ## Maintenance
