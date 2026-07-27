@@ -1,6 +1,6 @@
 ---
 name: git-commit-zh
-description: Draft Chinese Git commit messages that combine Gitmoji with Conventional Commits. Use when Codex needs to inspect `git status`, `git diff`, or `git diff --cached`, summarize repository changes, and prepare or execute a Git commit in Chinese with a correct type, optional scope, and breaking-change footer.
+description: Draft Chinese Git commit messages that combine Gitmoji with Conventional Commits, including concise bodies for changes with meaningful causes, impacts, compatibility concerns, operational notes, or verification details. Use when Codex needs to inspect `git status`, `git diff`, or `git diff --cached`, summarize repository changes, and prepare or execute a Git commit in Chinese with a correct type, optional scope, and breaking-change footer.
 ---
 
 # Git Commit Zh
@@ -70,11 +70,19 @@ description: Draft Chinese Git commit messages that combine Gitmoji with Convent
 
 ## Body And Footer
 
-只有在以下情况才添加正文或 footer：
+先判断提交是否需要正文。简单、单一、标题已经能准确表达结果的改动可以只写标题；遇到以下任一情形时，默认必须添加正文：
 
-- 仅看标题无法说明原因或影响范围。
-- 需要说明迁移步骤、兼容性变化或注意事项。
-- 存在破坏性变更，需要 `BREAKING CHANGE:` footer。
+- 同时影响多个模块、层级或文件类型。
+- 修改用户可见行为、业务规则或数据流。
+- 修复问题但根因、复现条件或影响范围无法从标题看清。
+- 涉及兼容性、迁移、配置、部署、回滚或使用注意事项。
+- 变更权限、事务、数据一致性、安全性或性能。
+- 包含多个紧密相关、但标题难以完整概括的改动。
+- 需要说明设计取舍、限制、未覆盖范围或验证方式。
+
+正文使用自然段，优先说明变更原因或根因，再说明影响范围、行为变化、注意事项或验证结果。按实际需要写 2–5 行，不强制补齐“原因”“影响”“验证”等标签，也不要为了满足格式编造内容。
+
+普通原因、影响、迁移步骤和验证说明写在正文；只有真正改变既有接口、配置或行为契约时，才添加 `BREAKING CHANGE:` footer，并同时在标题中使用 `!`。
 
 示例：
 
@@ -96,8 +104,14 @@ BREAKING CHANGE: 创建会话时必须传入 tenantId
 git commit -m "✨ feat(prompt): 支持中文诊前提示词模板"
 ```
 
-如果需要正文，使用多段 `-m`：
+如果需要正文，使用多段 `-m`；正文包含多个自然段时继续追加 `-m`：
 
 ```text
 git commit -m "♻️ refactor(ai): 拆分会话提示词构建逻辑" -m "抽离模板选择与消息组装，减少 useConversationAi 中的条件分支复杂度。"
+```
+
+需要破坏性变更说明时，将 footer 作为独立段落追加：
+
+```text
+git commit -m "🚨 feat(api)!: 调整会话鉴权参数" -m "统一创建会话时的鉴权参数，并更新调用方校验逻辑。" -m "BREAKING CHANGE: 创建会话时必须传入 tenantId"
 ```
