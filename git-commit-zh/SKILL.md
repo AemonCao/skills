@@ -44,18 +44,85 @@ description: Draft Chinese Git commit messages that combine Gitmoji with Convent
 
 ## Type And Gitmoji Mapping
 
-- `✨ feat`: 新功能、新能力、新接口。
-- `🐛 fix`: 缺陷修复、错误处理修正、行为纠偏。
-- `♻️ refactor`: 不改变外部行为的重构、拆分、抽象、整理。
-- `📝 docs`: 文档、注释、说明更新。
-- `✅ test`: 测试补充、测试修复、断言调整。
-- `⚡️ perf`: 性能优化、耗时或内存改进。
-- `🎨 style`: 代码格式、结构整理、命名微调，不影响运行逻辑。
-- `💄 style`: UI 样式、视觉呈现、界面细节调整。
-- `📦️ build`: 构建配置、依赖、打包产物相关调整。
-- `👷 ci`: CI/CD 流程、流水线、自动化发布配置。
-- `🔧 chore`: 杂项维护、工具配置、非产品行为变更。
-- `⏪️ revert`: 回滚历史提交。
+Gitmoji 不规定 Conventional Commit 的 `type`；先按改动意图选择 `type`，再从下列完整目录选择最贴切的 Gitmoji。常用搭配包括：`✨ feat`、`🐛 fix`、`♻️ refactor`、`📝 docs`、`✅ test`、`⚡️ perf`、`🎨 style`、`💄 style`、`📦️ build`、`👷 ci`、`🔧 chore`、`⏪️ revert`。
+
+以下目录与 `https://gitmoji.dev/api/gitmojis` 同步（2026-07-27，共 75 个）：
+
+- `🎨 :art:`：改善代码结构或格式。
+- `⚡️ :zap:`：改善性能。
+- `🔥 :fire:`：删除代码或文件。
+- `🐛 :bug:`：修复缺陷。
+- `🚑️ :ambulance:`：紧急修复严重问题。
+- `✨ :sparkles:`：引入新功能。
+- `📝 :memo:`：新增或更新文档。
+- `🚀 :rocket:`：部署内容。
+- `💄 :lipstick:`：新增或更新 UI 与样式文件。
+- `🎉 :tada:`：启动项目。
+- `✅ :white_check_mark:`：新增、更新或通过测试。
+- `🔒️ :lock:`：修复安全或隐私问题。
+- `🔐 :closed_lock_with_key:`：新增或更新密钥。
+- `🔖 :bookmark:`：发布或版本标签。
+- `🚨 :rotating_light:`：修复编译器或 linter 警告。
+- `🚧 :construction:`：进行中的工作。
+- `💚 :green_heart:`：修复 CI 构建。
+- `⬇️ :arrow_down:`：降级依赖。
+- `⬆️ :arrow_up:`：升级依赖。
+- `📌 :pushpin:`：锁定依赖至特定版本。
+- `👷 :construction_worker:`：新增或更新 CI 构建系统。
+- `📈 :chart_with_upwards_trend:`：新增或更新分析、埋点代码。
+- `♻️ :recycle:`：重构代码。
+- `➕ :heavy_plus_sign:`：新增依赖。
+- `➖ :heavy_minus_sign:`：移除依赖。
+- `🔧 :wrench:`：新增或更新配置文件。
+- `🔨 :hammer:`：新增或更新开发脚本。
+- `🌐 :globe_with_meridians:`：国际化与本地化。
+- `✏️ :pencil2:`：修正错别字。
+- `💩 :poop:`：写入待改进的糟糕代码。
+- `⏪️ :rewind:`：回滚改动。
+- `🔀 :twisted_rightwards_arrows:`：合并分支。
+- `📦️ :package:`：新增或更新编译产物或包。
+- `👽️ :alien:`：因外部 API 变更而更新代码。
+- `🚚 :truck:`：移动或重命名资源，例如文件、路径、路由。
+- `📄 :page_facing_up:`：新增或更新许可证。
+- `💥 :boom:`：引入破坏性变更。
+- `🍱 :bento:`：新增或更新资源文件。
+- `♿️ :wheelchair:`：改善无障碍支持。
+- `💡 :bulb:`：新增或更新源代码注释。
+- `🍻 :beers:`：醉酒编程。
+- `💬 :speech_balloon:`：新增或更新文本与字面量。
+- `🗃️ :card_file_box:`：进行数据库相关改动。
+- `🔊 :loud_sound:`：新增或更新日志。
+- `🔇 :mute:`：移除日志。
+- `👥 :busts_in_silhouette:`：新增或更新贡献者。
+- `🚸 :children_crossing:`：改善用户体验或易用性。
+- `🏗️ :building_construction:`：进行架构改动。
+- `📱 :iphone:`：处理响应式设计。
+- `🤡 :clown_face:`：模拟对象或行为。
+- `🥚 :egg:`：新增或更新彩蛋。
+- `🙈 :see_no_evil:`：新增或更新 `.gitignore` 文件。
+- `📸 :camera_flash:`：新增或更新快照。
+- `⚗️ :alembic:`：进行实验。
+- `🔍️ :mag:`：改善 SEO。
+- `🏷️ :label:`：新增或更新类型。
+- `🌱 :seedling:`：新增或更新种子文件。
+- `🚩 :triangular_flag_on_post:`：新增、更新或移除功能开关。
+- `🥅 :goal_net:`：捕获错误。
+- `💫 :dizzy:`：新增或更新动画与过渡效果。
+- `🗑️ :wastebasket:`：废弃待清理的代码。
+- `🛂 :passport_control:`：处理授权、角色与权限相关代码。
+- `🩹 :adhesive_bandage:`：简单修复非关键问题。
+- `🧐 :monocle_face:`：数据探索或检查。
+- `⚰️ :coffin:`：删除死代码。
+- `🧪 :test_tube:`：新增失败测试。
+- `👔 :necktie:`：新增或更新业务逻辑。
+- `🩺 :stethoscope:`：新增或更新健康检查。
+- `🧱 :bricks:`：基础设施相关改动。
+- `🧑‍💻 :technologist:`：改善开发者体验。
+- `💸 :money_with_wings:`：新增赞助或资金相关基础设施。
+- `🧵 :thread:`：新增或更新多线程、并发相关代码。
+- `🦺 :safety_vest:`：新增或更新校验相关代码。
+- `✈️ :airplane:`：改善离线支持。
+- `🦖 :t-rex:`：新增向后兼容代码。
 
 如果多个类型都能解释同一组改动，优先选择最能描述用户可感知结果的那个类型。
 
