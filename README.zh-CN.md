@@ -11,6 +11,7 @@
 - `grill-me`：围绕计划或设计进行连续追问，帮助梳理依赖、分支决策和潜在风险。
 - `grill-with-docs`：针对项目的领域模型和既有决策拷问计划，在术语和取舍逐步明确的过程中，同步更新 `CONTEXT.md` 和 ADR 文档。
 - `markdown-normalizer`：将普通文本或格式松散的内容整理为清晰的 Markdown，并保持原意不变。
+- `dbx-create-table-sql`：通过 DBX 检查 PostgreSQL 模式，并起草符合约定的 CREATE TABLE SQL。
 - `handoff`：将当前对话压缩为交接文档，方便另一个 agent 接手后续工作。
 - `prototype`：构建一次性原型来打磨设计方案——用终端应用验证逻辑/状态，或在单一路由上提供多个可切换的 UI 变体来探索设计。
 
@@ -31,6 +32,8 @@ skills/
     CONTEXT-FORMAT.md
     ADR-FORMAT.md
   markdown-normalizer/
+    SKILL.md
+  dbx-create-table-sql/
     SKILL.md
   handoff/
     SKILL.md
